@@ -1,6 +1,6 @@
 .menu {
 		color: white;
-		background-color: rgba(92, 184, 92, 0.8);//#5cb85c;
+		background-color: rgba(92, 184, 92, 0.9);//#5cb85c;
 		font-size: 20px;
 
 		position: fixed;
@@ -11,6 +11,10 @@
 	
 		width: 100%;
 		margin: 0;
+
+		-webkit-box-shadow: 0 8px 6px -6px #cccccc;
+	     -moz-box-shadow: 0 8px 6px -6px #cccccc;
+	          box-shadow: 0 8px 6px -6px #cccccc;
 }
 
 .menu .title {
