@@ -101,6 +101,11 @@
 		padding: 0;
 }
 
+.tab-icon:hover {
+		background-color: #5cb85c;
+		color: white;
+}
+
 .tab-icon-name {
 		font-size: 10px;
 		width: 100%;
