@@ -28,7 +28,7 @@
 			<a href="#">
 				{{name}}
 			</a>		
-			<a href="#">
+			<a href="/deleteList/{{name}}">
 				delete
 			</a>
 		</li>
@@ -46,6 +46,18 @@
 			<a href="#">check in</a>
 		</div>
 	</footer>
+
+	<form id="addList-form" role="form" method="get" action="/addList">
+    <label for="description">name:</label>
+	  <input type="text" class="form-control" id="name" placeholder="name" name="name">
+
+    <label for="description">description:</label>
+	  <input type="text" class="form-control" id="description" placeholder="description" name="description">
+    <label for="description">members:</label>
+	  <input type="text" class="form-control" id="members" placeholder="members" name="members">
+		
+		<input type="submit" id="submitBtn" class="btn btn-default" value="add list"></input>
+	</form>
 
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="js/bootstrap.js"></script>
