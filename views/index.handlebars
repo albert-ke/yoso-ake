@@ -5,8 +5,6 @@
 	<title>yoso</title>	
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -15,74 +13,37 @@
     <![endif]-->
 	<link href="css/bootstrap.css" rel="stylesheet">
 	<link href="css/bootstrap-theme.css" rel="stylesheet">
-	<link href="css/styles.css" rel="stylesheet">
 </head>
 
 <body>
-	<header class="menu row container">
-		<a href="#" class="left-nav col-xs-2">
-			<span class="glyphicon glyphicon-chevron-left"></span>
-		</a>
-		<h1 class="title col-xs-8">Menu</h1>
+	<header>
+		<a href="#">back </a>
+		<h1>yoso</h1>
 	</header>
 
-	<div class="top-offset"></div>
-
-	<ul class="list-area">
-		<li class="list-obj row container">
-			<a href="lists.html" class="list-el">
-				<text class="col-xs-10">Lists</text>
+	<ul>
+	{{#each lists}}
+		<li>
+			<a href="#">
+				{{name}}
 			</a>		
 		</li>
-		<li class="list-obj row container">
-			<a href="friends.html" class="list-el">
-				<text class="col-xs-10">Friends</text>
-			</a>		
-		</li>
-		<li class="list-obj row container">
-			<a href="checkin.html" class="list-el">
-				<text class="col-xs-10">Check In</text>
-			</a>		
-		</li>
-		<li class="list-obj row container">
-			<a href="trending.html" class="list-el">
-				<text class="col-xs-10">Trending</text>
-			</a>		
-		</li>
-		<li class="list-obj row container">
-			<a href="contact.html" class="list-el">
-				<text class="col-xs-10">Contact</text>
-			</a>		
-		</li>
-		<li class="list-obj row container">
-			<a href="login.html" class="list-el">
-				<text class="col-xs-10">Sign out</text>
-			</a>		
-		</li>
+	{{/each}}
 	</ul>
 	
-	<div class="bottom-offset"></div>
-
-	<footer class="tabs row">
-		<div class="tab-icon col-xs-3">
-			<span class="glyphicon glyphicon-list-alt"></span>
-			<div class="tab-icon-name">lists</div>
+	<footer>
+		<div id="lists-tab-icon">
+			<a href="#">lists</a>
 		</div>
-		<div class="tab-icon col-xs-3">
-			<span class="glyphicon glyphicon-user"></span>
-			<div class="tab-icon-name">friends</div>
+		<div id="friends-tab-icon">
+			<a href="#">friends</a>
 		</div>
-		<div class="tab-icon col-xs-3">
-			<span class="glyphicon glyphicon-map-marker"></span>
-			<div class="tab-icon-name">check in</div>
-		</div>
-		<div class="tab-icon col-xs-3">
-			<span class="glyphicon glyphicon-heart"></span>
-			<div class="tab-icon-name">trending</div>
+		<div id="checkin-tab-icon">
+			<a href="#">check in</a>
 		</div>
 	</footer>
 
   <script src="https://code.jquery.com/jquery.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+  <script src="js/bootstrap.js"></script>
 </body>
 </html>
