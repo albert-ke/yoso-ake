@@ -21,4 +21,8 @@ exports.deleteList = function(req, res){
 	var list = req.params.name;
 	data["lists"] = data["lists"].filter(function(o){return o.name != list});
 	res.redirect('/');
+};
+
+exports.test = function(req, res){
+	console.log("index.test");
 }

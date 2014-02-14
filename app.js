@@ -6,9 +6,10 @@
 var express = require('express');
 var http = require('http');
 var path = require('path');
-var handlebars = require('express3-handlebars')
+var handlebars = require('express3-handlebars');
 
 var index = require('./routes/index');
+var list = require('./routes/list');
 var friends = require('./routes/friends');
 // Example route
 // var user = require('./routes/user');
@@ -39,6 +40,10 @@ if ('development' == app.get('env')) {
 app.get('/', index.view);
 app.get('/addList', index.addList);
 app.get('/deleteList/:name', index.deleteList);
+app.get('/list/:name', list.view);
+app.get('/list/:name/addItem/:itemname', list.addItem);
+app.get('/list/:name/deleteItem/:itemname', list.deleteItem);
+
 app.get('/friends', friends.view);
 // Example route
 // app.get('/users', user.list);
@@ -46,3 +51,15 @@ app.get('/friends', friends.view);
 http.createServer(app).listen(app.get('port'), function(){
   console.log('Express server listening on port ' + app.get('port'));
 });
+
+/*
+handlebars.registerHelper('reach', function(context, options) {
+  var ret = "";
+
+  for(var i=0, j=context.length; i<j; i++) {
+    ret = ret + options.fn(context[i]);
+  }
+
+  return ret;
+});*/
+
