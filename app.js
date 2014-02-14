@@ -41,6 +41,7 @@ app.get('/addList', index.addList);
 app.get('/deleteList/:name', index.deleteList);
 app.get('/friends', friends.view);
 app.get('/addFriend', friends.addFriend)
+app.get('/searchFriends', friends.searchFriend)
 // Example route
 // app.get('/users', user.list);
 

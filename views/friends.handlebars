@@ -17,39 +17,40 @@
 
 <body>
 	<header>
-		<a href="#">back </a>
-		<h1>yoso</h1>
+		<button onclick=window.history.back()>Back</button>
+		<h1>friends</h1>
+		<a href="#">add</a>
+    	<input type="text" class="form-control" placeholder="Search">
+  		<button type="submit" id="search-friends" class="btn btn-default">Submit</button>
 	</header>
 
 	<ul>
-	{{#each lists}}
+	{{#each friends}}
 		<li>
-			<a href="#">
-				<text class="col-xs-10">{{name}}</text>
-				<text class="col-xs-10">{{description}}</text>
-				<text class="col-xs-10">{{members}}</text>
-			</a>		
+			<a href="#">{{firstName}}</a>
+			<a href="#">{{lastName}}</a>
+			<a href="#">{{email}}</a>		
 		</li>
 	{{/each}}
 	</ul>
 
-	{{#each lists}}
-		<ul class="list-area list-individual" id="{{name}}-contents">
-			{{#each contents}}
-			<li class="list-obj row container todo">
-				<a href="#">
-					<text class="col-xs-6">{{name}}</text>
-					<text class="info col-xs-4">{{quantity}}</text>
-					<span class="glyphicon glyphicon-unchecked col-xs-2"></span>
-				</a>
-			</li>
-			{{/each}}
-		</ul>
-		{{/each}}
+
+	<form id="addFriend-form" role="form" method="get" action="/addFriend">
+    <label for="description">first name:</label>
+	  <input type="text" class="form-control" id="firstName" placeholder="first name" name="firstName">
+
+    <label for="description">last name:</label>
+	  <input type="text" class="form-control" id="lastName" placeholder="last name" name="lastName">
+    <label for="description">email:</label>
+	  <input type="text" class="form-control" id="email" placeholder="email" name="email">
+		
+		<input type="submit" id="submitBtn" class="btn btn-default" value="add list"></input>
+	</form>
+
 	
 	<footer>
 		<div id="lists-tab-icon">
-			<a href="#">lists</a>
+			<a href="/">lists</a>
 		</div>
 		<div id="friends-tab-icon">
 			<a href="#">friends</a>
