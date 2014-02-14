@@ -11,15 +11,18 @@ $(document).ready(function() {
 
 function initializePage() {
 	console.log("Javascript connected!");
-	console.log(Handlebars);
+	console.log(ExpressHandlebars);
 }
+Handlebars.registerHelper('if_all', function() {
+    var args = [].slice.apply(arguments);
+    var opts = args.pop();
 
-Handlebars.registerHelper('reach', function(context, options) {
-  var ret = "";
-
-  for(var i=0, j=context.length; i<j; i++) {
-    ret = ret + options.fn(context[i]);
-  }
-
-  return ret;
+    var fn = opts.fn;
+    for(var i = 0; i < args.length; ++i) {
+        if(args[i])
+            continue;
+        fn = opts.inverse;
+        break;
+    }
+    return fn(this);
 });
