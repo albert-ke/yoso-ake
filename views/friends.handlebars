@@ -25,11 +25,27 @@
 	{{#each lists}}
 		<li>
 			<a href="#">
-				{{name}}
+				<text class="col-xs-10">{{name}}</text>
+				<text class="col-xs-10">{{description}}</text>
+				<text class="col-xs-10">{{members}}</text>
 			</a>		
 		</li>
 	{{/each}}
 	</ul>
+
+	{{#each lists}}
+		<ul class="list-area list-individual" id="{{name}}-contents">
+			{{#each contents}}
+			<li class="list-obj row container todo">
+				<a href="#">
+					<text class="col-xs-6">{{name}}</text>
+					<text class="info col-xs-4">{{quantity}}</text>
+					<span class="glyphicon glyphicon-unchecked col-xs-2"></span>
+				</a>
+			</li>
+			{{/each}}
+		</ul>
+		{{/each}}
 	
 	<footer>
 		<div id="lists-tab-icon">
