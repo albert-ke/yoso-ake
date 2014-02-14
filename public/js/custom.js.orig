@@ -1,14 +1,4 @@
-'use strict';
-
-
-// function displayFriend(e) {
-// 	e.preventDefault();
-// 	console.log($(this).attr("id"));
-// 	console.log($(this).attr("id") + "-contents");
-// 	$(".friend-area").hide();
-// 	$("#" + String($(this).attr("id")) + "-contents").show();
-// }
-
+<<<<<<< HEAD
 'use strict';
 
 // Call this function when the page loads (the "ready" event)
@@ -37,3 +27,16 @@ Handlebars.registerHelper('if_all', function() {
     }
     return fn(this);
 });
+=======
+'use strict';
+
+
+// function displayFriend(e) {
+// 	e.preventDefault();
+// 	console.log($(this).attr("id"));
+// 	console.log($(this).attr("id") + "-contents");
+// 	$(".friend-area").hide();
+// 	$("#" + String($(this).attr("id")) + "-contents").show();
+// }
+
+>>>>>>> 28498b6b1613fd5a185efd704fc36ff6128d7e84

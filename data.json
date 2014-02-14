@@ -1,7 +1,8 @@
 {
 	"friends": [
 		{
-			"name": "albert",
+			"firstName": "albert",
+			"lastName" : "Ke",
 			"email": "ake@ucsd.edu"
 		}
 	],
