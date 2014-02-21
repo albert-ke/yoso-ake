@@ -15,7 +15,7 @@
     <![endif]-->
 	<link href="public/css/bootstrap.css" rel="stylesheet">
 	<link href="public/css/bootstrap-theme.css" rel="stylesheet">
-	<link href="./remodel.css" rel="stylesheet">
+	<link href="public/css/styles.css" rel="stylesheet">
 </head>
 <body>
 	<header class="menu row container">
@@ -30,21 +30,19 @@
 
 	<div class="main">
 		<div class="add-form">
-			<form id="addListForm" role="form" method="get" action="/list/edit/listAdd" class="container">
-     	 		<label for="description">Name:</label>
-	     		<input type="text" class="form-control" id="name" placeholder="name" name="name">
-      		<label for="description">Description:</label>
-	     		<input type="text" class="form-control" id="description" placeholder="Description" name="description">
-      		<label for="description">Members:</label>
-	     		<input type="text" class="form-control" id="members" placeholder="members" name="members">
-					</br>
-					<input type="submit" id="submitBtn" class="btn btn-success" value="Add the list"></input> 
-			</form>
+			<form id="addItemForm" role="form" method="get" action="/list/edit/itemAdd/' + currentList + '">
+    	 		 	<label for="name">Name:</label>
+	     		 	<input type="text" class="form-control" id="name" placeholder="name" name="name">
+      			<label for="quantity">Quantity:</label>
+	     			<input type="text" class="form-control" id="quantity" placeholder="quantity" name="quantity">
+						</br>
+						<input type="submit" id="submitBtn" class="btn btn-success" value="Add the item"></input>
+			 </form>
 		</div>	
 		<div class="add">
 			+
 		</div>
-		<div class="element list-element row col-xs-12">
+		<!--<div class="element list-element row col-xs-12">
 			<div class="info col-xs-9">
 				<text class="list-name">Groceries</text>
 				<text class="list-description">for Apartment 218</text>
@@ -53,9 +51,8 @@
 			<div class="edit edit-list col-xs-3">
 				<div class="delete delete-Groceries">delete</div>
 			</div>
-		</div>
-		
-		<!--<div class="element item-element row col-xs-12 todo">
+		</div>-->
+		<div class="element item-element row col-xs-12 todo">
 			<div class="info col-xs-5">
 				<text class="list-name">pineapples</text>
 			</div>
@@ -68,7 +65,7 @@
 			<div class="edit edit-item col-xs-3">
 				<div class="delete delete-pineapples">delete</div>
 			</div>
-		</div>-->
+		</div>
 	</div>
 
 	<footer class="tabs row">
@@ -95,5 +92,8 @@
   <script src="public/js/bootstrap.js"></script>
 	<script type="text/javascript" src="http://cloud.github.com/downloads/wycats/handlebars.js/handlebars-1.0.rc.1.min.js"></script>
   <script src="./remodel.js"></script>
+	<script type="text/javascript">
+			//$('.item-element .edit').css('height', $('.item-element').height());
+	</script>
 </body>
 </html>
