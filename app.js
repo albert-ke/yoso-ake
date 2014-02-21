@@ -48,6 +48,9 @@ app.get('/list/edit/itemAdd/:list', lists.itemAdd);
 app.get('/list/edit/itemDelete/:list/:item', lists.itemDelete);
 
 app.get('/friends/all', friends.listAll);
+app.get('/friends/edit/friendAdd', friends.friendAdd);
+app.get('/friends/edit/friendDelete/:firstname/:lastname', friends.friendDelete);
+
 // Example route
 // app.get('/users', user.list);
 

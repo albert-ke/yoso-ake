@@ -1,5 +1,5 @@
 function displayFriends() {
-	var getURL = "/friends/all"
+	var getURL = "/friends/all";
 	$.get(getURL, displayFriendsCallback);
 }
 
@@ -14,11 +14,11 @@ function displayFriendsCallback(result) {
 	$('header').html(headerHTML);
 
 	var main = 	'	<div class="add-form">	' +
-							'		<form id="addFriendForm" role="form" method="get" action="/friend/edit/friendAdd" class="container">	' +
+							'		<form id="addFriendForm" role="form" method="get" action="/friends/edit/friendAdd" class="container">	' +
  						  '  		<label for="description">First Name:</label>	' +
-							'  		<input type="text" class="form-control" id="first-name" placeholder="first name" name="first-name">	' +
+							'  		<input type="text" class="form-control" id="firstname" placeholder="first name" name="firstname">	' +
   						'  		<label for="description">Last Name:</label> ' +
-							'  		<input type="text" class="form-control" id="last-name" placeholder="last name" name="last-name">	' +
+							'  		<input type="text" class="form-control" id="lastname" placeholder="last name" name="lastname">	' +
   						'  		<label for="description">Email:</label> ' +
 							'  		<input type="text" class="form-control" id="email" placeholder="email" name="email">	' +
 							'			</br>	' +
@@ -32,10 +32,10 @@ function displayFriendsCallback(result) {
 							'	<div class="element list-element row col-xs-12">	' +
 							'		<div class="info col-xs-9" id="{{first-name}}{{last-name}}">	' +
 							'			<text class="list-name">{{first-name}} {{last-name}}</text>	' +
-							'			<text class="list-members">{{email}}</text>	' +
+							'			<text class="list-description">{{email}}</text>	' +
 							'		</div>	' +
 							'		<div class="edit edit-list col-xs-3">	' +
-							'			<div class="delete delete-{{name}}"><a href="/friend/edit/{{name}}">delete</a></div>	' +
+							'			<div class="delete delete-{{name}}"><a href="/friends/edit/friendDelete/{{first-name}}/{{last-name}}">delete</a></div>	' +
 							'		</div>	' +
 							'	</div>	' +
 							'	{{/each}}';
@@ -46,18 +46,18 @@ function displayFriendsCallback(result) {
 	displayFriendsJQuery();
 }
 
-function displayFriendsJQuery() {
-	// make sure content fits within middle section
+function displayFriendsJQuery() {	
 	var headerHeight = $('header').height();
 	var footerHeight = $('footer').height();
 
+	// make sure content fits within middle section
 	$('.main').css('margin-top', headerHeight);
 	$('.main').css('margin-bottom', footerHeight); 
 
 	$('.add').css('top', headerHeight);
 	$('.add-form').css('top', headerHeight + $('.add').height());
-	$('.edit').css('height', $('.element').height());
 
+	$('.edit').css('height', $('.element').height());
 	$('.menu-right').click(function() {
 		function hideEdit(callback) {
 			$('.add-form').hide();
@@ -81,16 +81,4 @@ function displayFriendsJQuery() {
 	$('.add').click(function() {
 		$('.add-form').toggle();
 	});
-
-	$('.item-element .complete').click(function() {
-		if ($(this).find('.status').is('.todo')) {
-			$(this).find('.status').removeClass('todo').addClass('done');
-			$(this).find('.status').html('done');
-			//database update to modify status
-		}
-		else if($(this).find('.status').is('.done')) {
-			$(this).find('.status').removeClass('done').addClass('todo');
-			$(this).find('.status').html('todo');
-			//database update to modify status
-		}
 }
