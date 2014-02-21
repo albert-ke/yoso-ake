@@ -1,34 +1,98 @@
 {
-	"friends": [
-		{
-			"name": "Doug Engelbart",
-			"description": "Has awesome pet mice",
-			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/thumb/7/78/Douglas_Engelbart_in_2008.jpg/972px-Douglas_Engelbart_in_2008.jpg"			
+	"friends": {
+		"Albert Ke": {
+			"first-name": "Albert",
+			"last-name": "Ke",
+			"photo": "Albert's Picture",
+			"email": "Albert's Email"
 		},
-		{
-			"name": "Ivan Sutherland",
-			"description": "Great at sketching",
-			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/5/5c/Ivan_Sutherland_at_CHM.jpg"			
-		},
-		{
-			"name": "Lucy Suchman",
-			"description": "Loves Trukese navigators",
-			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/d/df/Lucy_Suchman.jpeg"			
-		},
-		{
-			"name": "Vannevar Bush",
-			"description": "Has stellar associative memory",
-			"imageURL": "http://upload.wikimedia.org/wikipedia/commons/e/ea/Vannevar_Bush_portrait.jpg"			
-		},
-		{
-			"name": "Grace Hopper",
-			"description": "Only friend with a Navy ship named after them",
-			"imageURL": "http://www.personal.psu.edu/djd5202/gHop.jpg"
-		},
-		{
-			"name": "Allen Newell",
-			"description": "Really into psychology",
-			"imageURL": "http://www.nap.edu/html/biomems/photo/anewell.JPG"
+		"Brett Parsekian": {
+			"first-name": "Brett",
+			"last-name": "Parsekian",
+			"photo": "Brett's Picture",
+			"email": "Brett's Email"	
 		}
-	]
+	},
+	"lists": {
+		"Groceries": {
+			"name": "Groceries",
+			"description": "Nom nom nom",
+			"contents": {
+				"natto": {
+					"name": "natto",
+					"quantity": 3,
+					"complete": "false"
+				},
+				"cleaver": {
+					"name": "cleaver",
+					"quantity": 1,
+					"complete": "false"
+				},
+				"apples": {
+					"name": "apples",
+					"quantity": 5,
+					"complete": "false"
+				},
+				"cool mint oreos": {
+					"name": "cool mint oreos",
+					"quantity": 1,
+					"complete": "false"
+				}
+			},
+			"members": [
+				"Albert Ke"	
+			]
+		},
+		"Cleaning": {
+			"name": "Cleaning",
+			"description": "D:",
+			"contents": {
+				"mop": {
+					"name": "mop",
+					"quantity": 1,
+					"complete": "true"
+				},
+				"soap": {
+					"name": "soap",
+					"quantity": 5,
+					"complete": "false"
+				}
+			},
+			"members": [
+				"Albert Ke",
+				"Brett Parsekian"
+			]
+		},
+		"CSE170": {
+			"name": "CSE170",
+			"description": "So much work...",
+			"contents": {
+				"ideas": {
+					"name": "ideas",
+					"quantity": 15,
+					"complete": "false"
+				},
+				"applications": {
+					"name": "applications",
+					"quantity": 1,
+					"complete": "false"
+				},
+				"prototypes": {
+					"name": "prototypes",
+					"quantity": 2,
+					"complete": "false"
+				},
+				"cool mint oreos": {
+					"name": "cool mint oreos",
+					"quantity": 1,
+					"complete": "false"
+				}
+			},
+			"members": [
+				"Brett Parsekian",
+				"Meena Mostamandi"
+			]
+		}
+	}
 }
+
